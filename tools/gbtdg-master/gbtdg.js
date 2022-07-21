@@ -549,7 +549,7 @@ function optionsRadioButtonsHandler() {
 				o_hex_prefix = "0x";
 				o_var_equals = "=";
 				o_var_char = "const unsigned char ";
-				o_var_int = "#include ";
+				o_var_int = "#define ";
 				o_array_begin = "{\r\n";
 				o_array_end = "};\r\n";
 				o_array_line_end = ",";
