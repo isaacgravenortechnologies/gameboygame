@@ -871,11 +871,11 @@ function generateOutput() {
 				output_buffer += o_line_begin;
 
 				for(var i = 0; i < actual_mapData_length; i++) {
-					output_buffer += generateHex(actual_mapData[i], o_hex_prefix);
+					output_buffer += (generateHex(actual_mapData[i], o_hex_prefix)+"+0x80");
 
 					if(i !== (actual_mapData_length - 1)) {
 						if((i + 1) % 16 !== 0) {
-							output_buffer += "+0x80,";
+							output_buffer += ",";
 						} else {
 							output_buffer += o_array_line_end + "\r\n";
 							if(i !== (actual_mapData_length - 1)) {
