@@ -845,7 +845,7 @@ function generateOutput() {
 				o_var_int + file_name_clean.toUpperCase() + "_TILE_SET_SIZE "+
 				generateHex(actual_tileData_length * 16, o_hex_prefix)  +
 				"\r\n" +
-				o_var_int + file_name_clean.toUpperCase() + "_TITLE_SET_COUNT " +
+				o_var_int + file_name_clean.toUpperCase() + "_TILE_SET_COUNT " +
 				generateHex(actual_tileData.length, o_hex_prefix) +
 				"\r\n\r\n";
 		}
@@ -865,7 +865,7 @@ function generateOutput() {
 				if(o_asm_format == "checked") {
 					output_buffer += file_name_clean + "_map_data:\r\n";
 				} else if (o_c_format == "checked") {
-					output_buffer += o_var_char + file_name_clean + "_map_data[] " + o_var_equals + o_array_begin;
+					output_buffer += o_var_char + file_name_clean + "_tile_map[] " + o_var_equals + o_array_begin;
 				}
 
 				output_buffer += o_line_begin;
